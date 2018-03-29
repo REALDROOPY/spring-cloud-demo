@@ -1,2 +1,7 @@
 /client-demo/*.iml
 /eureka-server/.mvn
+/client-demo/.mvn
+/client-demo2/.mvn
+/config-server-demo/.mvn
+/zipkin-server-demo/.mvn
+/zuul-demo/.mvn
