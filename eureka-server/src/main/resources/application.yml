@@ -1,0 +1,72 @@
+debug: false
+
+#ip:
+#  host: 10.47.17.240
+#  guest: 10.47.18.107
+myenv:
+  hostname: docker.dr.org
+
+#security:
+#  basic:
+#    enabled: true
+#  user:
+#    name: admin
+#    password: 123456
+
+#management:
+#  security:
+#    roles: SUPERUSER
+
+spring:
+  profiles:
+    active: server1
+
+---
+spring:
+  profiles: server1
+
+server:
+  port: 8010
+
+eureka:
+#  instance:
+#    preferIpAddress: true
+#    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+      registerWithEureka: false
+      fetchRegistry: false
+      serviceUrl:
+#        defaultZone: http://admin:123456@${myenv.hostname}:8011/eureka/,http://admin:123456@${myenv.hostname}:8012/eureka/
+        defaultZone: http://${myenv.hostname}:8011/eureka/,http://${myenv.hostname}:8012/eureka/
+#  server:
+#    waitTimeInMsWhenSyncEmpty: 0
+#    enableSelfPreservation: false
+
+---
+spring:
+  profiles: server2
+
+server:
+  port: 8011
+
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://admin:123456@${myenv.hostname}:8010/eureka/,http://admin:123456@${myenv.hostname}:8012/eureka/
+      defaultZone: http://${myenv.hostname}:8010/eureka/,http://${myenv.hostname}:8012/eureka/
+
+---
+spring:
+  profiles: server3
+
+server:
+  port: 8012
+
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://admin:123456@${myenv.hostname}:8010/eureka/,http://admin:123456@${myenv.hostname}:8011/eureka/
+      defaultZone: http://${myenv.hostname}:8010/eureka/,http://${myenv.hostname}:8011/eureka/
+
+
+

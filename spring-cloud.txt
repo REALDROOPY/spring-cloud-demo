@@ -1,0 +1,45 @@
+java -jar D:/MyProjects/spring-boot/SpringCloudEurekaClient/target/spring-cloud-eureka-client-1.0-SNAPSHOT.jar
+
+
+java -Dserver.port=8010 -Deureka.client.serviceUrl.defaultZone=http://127.0.0.1:8010/eureka/,http://127.0.0.1:8011/eureka/,http://127.0.0.1:8012/eureka/ -jar target\spring-cloud-eureka-server-1.0-SNAPSHOT.jar
+
+java -Dserver.port=8010 -jar D:/MyProjects/spring-boot/SpringCloudEurekaServer/target/spring-cloud-eureka-server-1.0-SNAPSHOT.jar
+
+
+java -Dspring.profiles.active=server1 -jar D:/MyProjects/spring-boot/SpringCloudEurekaServer/target/spring-cloud-eureka-server-1.0-SNAPSHOT.jar
+java -Dspring.profiles.active=server2 -jar D:/MyProjects/spring-boot/SpringCloudEurekaServer/target/spring-cloud-eureka-server-1.0-SNAPSHOT.jar
+
+
+java -Dspring.profiles.active=server3 -jar D:/MyProjects/spring-boot/SpringCloudEurekaServer/target/spring-cloud-eureka-server-1.0-SNAPSHOT.jar
+
+
+
+java -Dspring.profiles.active=server1 -jar ~/spring-cloud-eureka-server-1.0-SNAPSHOT.jar
+
+
+java -server -Xms32m -Xmx128m -jar /data/myapp/eureka-server-0.0.1-SNAPSHOT.jar --spring.profiles.active=server1
+java -server -Xms32m -Xmx128m -jar /data/myapp/eureka-server-0.0.1-SNAPSHOT.jar --spring.profiles.active=server2
+java -server -Xms32m -Xmx128m -jar /data/myapp/eureka-server-0.0.1-SNAPSHOT.jar --spring.profiles.active=server3
+
+
+D:\Java\jdk1.8.0_161\bin\java.exe -server -Xms32m -Xmx128m -jar D:\MyProjects\springCloud\eureka-server\target\eureka-server-0.0.1-SNAPSHOT.jar --spring.profiles.active=server1
+D:\Java\jdk1.8.0_161\bin\java.exe -server -Xms32m -Xmx128m -jar D:\MyProjects\springCloud\eureka-server\target\eureka-server-0.0.1-SNAPSHOT.jar --spring.profiles.active=server2
+D:\Java\jdk1.8.0_161\bin\java.exe -server -Xms32m -Xmx128m -jar D:\MyProjects\springCloud\eureka-server\target\eureka-server-0.0.1-SNAPSHOT.jar --spring.profiles.active=server3
+
+
+D:\Java\jdk1.8.0_161\bin\java.exe -server -Xms32m -Xmx128m -jar D:\MyProjects\springCloud\config-server-demo\target\config-server-demo-0.0.1-SNAPSHOT.jar --spring.profiles.active=server1
+D:\Java\jdk1.8.0_161\bin\java.exe -server -Xms32m -Xmx128m -jar D:\MyProjects\springCloud\config-server-demo\target\config-server-demo-0.0.1-SNAPSHOT.jar --spring.profiles.active=server2
+
+D:\Java\jdk1.8.0_161\bin\java.exe -server -Xms32m -Xmx128m -jar D:\MyProjects\springCloud\client-demo\target\client-demo-0.0.1-SNAPSHOT.jar --spring.profiles.active=server1
+D:\Java\jdk1.8.0_161\bin\java.exe -server -Xms32m -Xmx128m -jar D:\MyProjects\springCloud\client-demo\target\client-demo-0.0.1-SNAPSHOT.jar --spring.profiles.active=server2
+
+D:\Java\jdk1.8.0_161\bin\java.exe -server -Xms32m -Xmx128m -jar D:\MyProjects\springCloud\client-demo2\target\client-demo-0.0.1-SNAPSHOT.jar --spring.profiles.active=server1
+D:\Java\jdk1.8.0_161\bin\java.exe -server -Xms32m -Xmx128m -jar D:\MyProjects\springCloud\client-demo2\target\client-demo-0.0.1-SNAPSHOT.jar --spring.profiles.active=server2
+
+D:\Java\jdk1.8.0_161\bin\java.exe -server -Xms32m -Xmx128m -jar D:\MyProjects\springCloud\zuul-demo\target\zuul-demo-0.0.1-SNAPSHOT.jar --spring.profiles.active=server1
+
+D:\Java\jdk1.8.0_161\bin\java.exe -server -Xms32m -Xmx128m -jar D:\MyProjects\springCloud\zipkin-server-demo\target\zipkin-server-demo-0.0.1-SNAPSHOT.jar --spring.profiles.active=server1
+
+
+
+java -jar ~/spring-cloud-eureka-client-1.0-SNAPSHOT.jar

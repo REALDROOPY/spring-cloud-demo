@@ -1,0 +1,46 @@
+debug: false
+
+myenv:
+  hostname: docker.dr.org
+
+eureka:
+  instance:
+    preferIpAddress: true
+    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    serviceUrl:
+#      defaultZone: http://admin:123456@${myenv.hostname}:8010/eureka/,http://admin:123456@${myenv.hostname}:8011/eureka/,http://admin:123456@${myenv.hostname}:8012/eureka/
+      defaultZone: http://${myenv.hostname}:8010/eureka/,http://${myenv.hostname}:8011/eureka/,http://${myenv.hostname}:8012/eureka/
+
+spring:
+  profiles:
+    active: server1
+  cloud:
+    config:
+#      label: master
+      label: dingding_demo
+      server:
+        git:
+          uri: https://github.com/REALDROOPY/spring-cloud-config-demo-resources
+#          uri: http://git01.dds.com/CXJ/chexiangjia-callback-web
+#          uri: https://github.com/forezp/SpringcloudConfig/
+#          uri: https://github.com/forezp/SpringcloudConfig.git
+#          searchPaths: respo
+#          searchPaths: spring-cloud-config
+          searchPaths: client1,client2
+#          username: jiangkun
+#          password: 3edc4rfv
+
+---
+spring:
+  profiles: server1
+
+server:
+  port: 8020
+
+---
+spring:
+  profiles: server2
+
+server:
+  port: 8021

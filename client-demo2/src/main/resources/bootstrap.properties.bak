@@ -1,0 +1,8 @@
+spring.application.name=eureka-client2
+
+spring.cloud.config.profile=dev
+spring.cloud.config.name=ds
+spring.cloud.config.discovery.enabled=true
+spring.cloud.config.discovery.service-id=config-server
+
+eureka.client.serviceUrl.defaultZone=http://eureka1.myspringcloud.com:8881/eureka/,http://eureka2.myspringcloud.com:8882/eureka/,http://eureka3.myspringcloud.com:8883/eureka/

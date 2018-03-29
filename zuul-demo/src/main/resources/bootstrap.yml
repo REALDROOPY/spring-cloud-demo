@@ -1,0 +1,18 @@
+myenv:
+  hostname: docker.dr.org
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${myenv.hostname}:8010/eureka/,http://${myenv.hostname}:8011/eureka/,http://${myenv.hostname}:8012/eureka/
+
+spring:
+#  cloud:
+#    config:
+#      name: client2
+#      profile: dev
+#      discovery:
+#        enabled: true
+#        serviceId: config-server
+  application:
+    name: zuul-server

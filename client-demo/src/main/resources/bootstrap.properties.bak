@@ -1,0 +1,11 @@
+myenv.hostname=docker.dr.org
+
+spring.application.name=eureka-client1
+
+spring.cloud.config.profile=dev
+spring.cloud.config.name=myapp
+spring.cloud.config.discovery.enabled=true
+spring.cloud.config.discovery.service-id=config-server
+
+#eureka.client.serviceUrl.defaultZone=http://eureka1.myspringcloud.com:8881/eureka/,http://eureka2.myspringcloud.com:8882/eureka/,http://eureka3.myspringcloud.com:8883/eureka/
+eureka.client.serviceUrl.defaultZone=http://${myenv.hostname}:8010/eureka/,http://${myenv.hostname}:8011/eureka/,http://${myenv.hostname}:8012/eureka/
