@@ -5,3 +5,15 @@
 /config-server-demo/.mvn
 /zipkin-server-demo/.mvn
 /zuul-demo/.mvn
+/client-demo/mvnw.cmd
+/client-demo/mvnw
+/client-demo2/mvnw.cmd
+/client-demo2/mvnw
+/config-server-demo/mvnw.cmd
+/config-server-demo/mvnw
+/eureka-server/mvnw.cmd
+/eureka-server/mvnw
+/zipkin-server-demo/mvnw.cmd
+/zipkin-server-demo/mvnw
+/zuul-demo/mvnw.cmd
+/zuul-demo/mvnw
