@@ -40,6 +40,13 @@ D:\Java\jdk1.8.0_161\bin\java.exe -server -Xms32m -Xmx128m -jar D:\MyProjects\sp
 
 D:\Java\jdk1.8.0_161\bin\java.exe -server -Xms32m -Xmx128m -jar D:\MyProjects\springCloud\zipkin-server-demo\target\zipkin-server-demo-0.0.1-SNAPSHOT.jar --spring.profiles.active=server1
 
+mvn package docker:build
+
+docker run -p 8010:8010 -t droopy/eureka-server
+
+docker-compose -f docker-compose-dev.yml up --build
+
+
 
 mvn mybatis-generator:generate
 
