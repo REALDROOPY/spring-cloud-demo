@@ -8,7 +8,6 @@ eureka:
 #    serviceUrl:
 #      defaultZone: http://admin:123456@${myenv.hostname}:8010/eureka/,http://admin:123456@${myenv.hostname}:8011/eureka/,http://admin:123456@${myenv.hostname}:8012/eureka/
 #      defaultZone: http://${myenv.hostname}:8010/eureka/,http://${myenv.hostname}:8011/eureka/,http://${myenv.hostname}:8012/eureka/
-
 spring:
   profiles:
     active: server1
@@ -17,6 +16,24 @@ spring:
   sleuth:
     sampler:
       percentage: 1
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/springcloud?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&generateSimpleParameterMetadata=true
+    username: springcloud
+    password: springcloud
+    driver-class-name: com.mysql.jdbc.Driver
+
+logging:
+  level:
+    root: INFO
+    org.mybatis: debug
+    org.springframework.transaction: INFO
+    com.example.client.demo.dao: debug
+    com.example.client.demo.mapper: debug
+
+mybatis:
+#  typeAliasesPackage: com.example.client.demo.vo
+  mapperLocations: classpath:mapper/*.xml
+
 
 ---
 spring:

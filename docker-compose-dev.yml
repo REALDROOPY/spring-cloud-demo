@@ -1,4 +1,6 @@
 version: '3'
+environment:
+  - JVM_OPTS=-Xmx128m -Xms16m -XX:MaxPermSize=32m
 services:
   eureka-server:
     build: eureka-server
