@@ -21,6 +21,15 @@ spring:
     username: springcloud
     password: springcloud
     driver-class-name: com.mysql.jdbc.Driver
+#  freemarker:
+#    charset: utf-8
+#    cache: false
+#    template-loader-path: classpath:/templates/
+#    content-type: text/html
+#    expose-request-attributes: true
+#    expose-session-attributes: true
+#    suffix: .ftl
+#    request-context-attribute: request
 
 logging:
   level:
